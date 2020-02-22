@@ -39,10 +39,10 @@ public class PlayWithFloatingPrimitive {
         a = sc.nextDouble();
 
         double trigIdentity = Math.pow(Math.sin(a), 2) + Math.pow(Math.cos(a), 2);
-        System.out.println("trigIdentity = " + trigIdentity);
+        System.out.println("trigIdentity = " + trigIdentity); //not always 1 as it should
 
         double first = 8374874784.948394939483984983;
         double second = 8374874784.948394939483984983;
-        System.out.println("first = second: " + (first == second));
+        System.out.println("first = second: " + (first == second)); //not always equal
     }
 }
