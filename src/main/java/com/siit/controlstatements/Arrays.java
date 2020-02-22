@@ -4,9 +4,8 @@ public class Arrays {
 
     public static void main(String... args) {
 
-
         String[] arrayString = new String[8];
-        //arrayString[6]=''; //does not work
+        //arrayString[6]='a'; //does not work
         arrayString[6] = "Java";
         arrayString[5] = "C++";
         arrayString[4] = "PHP";
@@ -14,6 +13,7 @@ public class Arrays {
             System.out.println("str = " + str);
         }
         System.out.println("\n\n\n");
+        //next are equivalent
 //        int[] matrix[];
 //        int matrix[][];
 
@@ -22,7 +22,6 @@ public class Arrays {
 
         //va contine un array de arayuri, cu valori default
         int[][] matrix2 = new int[3][3];
-
 
         //nr de [] repr. nr de dimensiuni sau nr de acolade imbricate
         int[][] matrix3 = {
@@ -40,6 +39,6 @@ public class Arrays {
         }
 
         //System.out.println(matrix3[4]); // ArrayIndexOutOfBoundsException
-        System.out.println(matrix3[matrix3.length - 1]); // merge
+        System.out.println(matrix3[matrix3.length - 1]); // ok
     }
 }
