@@ -29,5 +29,21 @@ public class PlayWithIntegerPrimitives {
         System.out.println("3/2.0 = " + 3 / 2.0); //1.5
         System.out.println("3/2.0F = " + 3 / 2.0F); //1.5
         System.out.println("3.0/2.0 = " + 3.0 / 2.0); //1.5
+
+
+        System.out.println("12345"); //string literal
+        System.out.println(12345); //int literal
+
+        int i = Integer.parseInt("483747");
+
+        char unicodeChar = 'd';
+        char unicodeChar1 = 'd';
+        System.out.println("unicodeChar = " + unicodeChar);
+        System.out.println("unicodeChar1 = " + unicodeChar1);
+
+        char unicodeSpecialChar = 'Ħ';
+        char unicodeSpecialChar1 = '\u0126';
+        System.out.println("unicodeSpecialChar = " + unicodeSpecialChar);
+        System.out.println("unicodeSpecialChar1 = " + unicodeSpecialChar1);
     }
 }
