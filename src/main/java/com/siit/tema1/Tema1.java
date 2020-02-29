@@ -1,8 +1,14 @@
 package com.siit.tema1;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+
+import static java.lang.Integer.MAX_VALUE;
+import static java.lang.Integer.parseInt;
 
 public class Tema1 {
+    List<String> stringList = new ArrayList<>();
 
     public static void main(String... args) {
         int[][] m = {
@@ -11,11 +17,15 @@ public class Tema1 {
                 {7, 8, 9}
         };
 
-        checkSquareMatrix(m);
+        Tema1.checkSquareMatrix(m);
 
         int[] arr = {70, 10, 20, 20, 10, 40, 30, 40, 50, 70};
         String stringArrayWithoutDuplicates = removeDuplicates(arr);
         System.out.println("stringArrayWithoutDuplicates = " + stringArrayWithoutDuplicates);
+
+        int parsedInt = parseInt("10");
+
+        int maxValue = MAX_VALUE;
     }
 
     public static void checkSquareMatrix(int[][] m) {
@@ -38,6 +48,7 @@ public class Tema1 {
     }
 
     private static String removeDuplicates(int[] arr) {
+        //orice clasa are un fully-qualified-name=pachet.ClassName unic
         Arrays.sort(arr);
         int length = arr.length;
 
