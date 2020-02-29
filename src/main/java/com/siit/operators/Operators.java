@@ -22,4 +22,8 @@ public class Operators {
         System.out.println("multilineString = " + multilineString);
     }
 
+    //schimbari in stash
+    //
+    //
+
 }
