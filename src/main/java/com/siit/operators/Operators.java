@@ -20,7 +20,6 @@ public class Operators {
                 " were used in \nthis build, making" +
                 " it incompatible with Gradle 7.0.";
         System.out.println("multilineString = " + multilineString);
-
     }
 
 }
