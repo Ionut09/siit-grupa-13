@@ -10,6 +10,15 @@ public class Car {
     private String model;
     private int power; //kW
     private int speed;
+    private Engine engine;
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
 
     public Car() {
         this("white", 5, 100, "petrol", 150, "berlina");
