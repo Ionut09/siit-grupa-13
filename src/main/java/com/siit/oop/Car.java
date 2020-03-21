@@ -7,7 +7,9 @@ public class Car {
     private String color;
     private int doorsNumber;
     private String fuel;
-    private String model;
+
+    private String model; //null nu "null"
+
     private int power; //kW
     private int speed;
     private Engine engine;
@@ -22,6 +24,7 @@ public class Car {
 
     public Car() {
         this("white", 5, 100, "petrol", 150, "berlina");
+        //no super() allowed
         setColor("Black");
     }
 
@@ -95,6 +98,7 @@ public class Car {
             this.power = power;
             System.out.println("power set to: " + power);
         } else {
+            getColor();
             System.out.println("Bad value for power!");
             throw new IllegalArgumentException("Bad value for power!");
         }

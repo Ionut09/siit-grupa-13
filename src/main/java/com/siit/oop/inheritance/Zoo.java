@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Zoo {
+
     public static void main(String... args) {
         List<Animal> animals = new ArrayList<Animal>();
 
@@ -47,11 +48,18 @@ public class Zoo {
         System.out.println("containsMiti = " + containsMiti);
 
         animals.remove(new Cat("Miti"));
-        int size = animals.size();//dim listei
+        int size = animals.size();//dimensiunea listei
         for (Animal animal2 : animals) {
             System.out.println(animal2);
+            //echivalent cu
+//            System.out.println(animal2.toString());
         }
 
+        //pt ca referinta an este de tip ANimal
+        Animal an = new Cat();
+        an = new Dog();
+        an = new Hawk();
+        an.move();
 
     }
 }

@@ -61,8 +61,9 @@ public class Garage {
         System.out.println("defaultCar color: " + defaultCar.getColor());
 
         Engine engine = new Engine(3500, "V");
+        Engine engine2 = engine;//new Engine(3500, "V");
+        System.out.println(engine == engine2);
+        System.out.println(engine.equals(engine2));
         porsche.setEngine(engine);
-
-
     }
 }

@@ -1,7 +1,12 @@
 package com.siit.oop;
 
+import lombok.EqualsAndHashCode;
+
+@EqualsAndHashCode
 public class Engine {
+
     private int displacement;
+
     private String type; //V, line
 
 

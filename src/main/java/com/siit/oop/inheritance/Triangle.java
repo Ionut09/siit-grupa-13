@@ -4,7 +4,7 @@ package com.siit.oop.inheritance;
 public class Triangle extends Shape {
 
     public Triangle() {
-        //insertia lui super e garantata de compiler
+        //insertia lui super(); e garantata de compiler
         this("white"); //nu mai pune super()
     }
 
