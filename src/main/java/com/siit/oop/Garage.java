@@ -62,8 +62,30 @@ public class Garage {
 
         Engine engine = new Engine(3500, "V");
         Engine engine2 = engine;//new Engine(3500, "V");
+        engine = null;
+        engine2 = null;
+
+//        engine = new Engine();
         System.out.println(engine == engine2);
         System.out.println(engine.equals(engine2));
         porsche.setEngine(engine);
+
+        System.gc(); //nu face GC sa ruleze imediat, ci doar sugereaza GC ca ar trebui sa ruleze
+
+
+        String name = "John";
+        String name1 = new String("John");
+
+        String name2 = "Jo" + "hn";
+        String name4 = "John";
+
     }
 }
+
+
+
+
+
+
+
+

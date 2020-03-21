@@ -13,6 +13,16 @@ public class Suplement {
 
     private String name;
 
+//    public Suplement(int dose, String name) {
+//
+//        this.dose = dose;
+//        this.name = name;
+//    }
+//
+//    public static void main(String... args) {
+//        new Suplement( "soarbe zeama", 12);
+//    }
+
 //    @Override
 //    public String toString() {
 //        return getClass().getSimpleName();
