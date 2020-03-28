@@ -14,6 +14,7 @@ public class Dog extends Animal {
 
     @Override
     public void move() {
+        super.toString();
         System.out.println("Dog running");
     }
 }

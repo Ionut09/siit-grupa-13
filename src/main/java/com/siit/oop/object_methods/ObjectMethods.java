@@ -9,5 +9,11 @@ public class ObjectMethods {
         System.out.println(aClass.getName());
 
 //        uidniusnd
+        MyClass c = new MyClass();
     }
+
+    static class MyClass {
+
+    }
+
 }

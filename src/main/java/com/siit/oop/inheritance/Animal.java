@@ -2,7 +2,25 @@ package com.siit.oop.inheritance;
 
 public abstract class Animal {
 
-    private String species;
+    static {
+        System.out.println("some");
+    }
+//
+//    public void setSpecies(String s) {
+//        this.species = s;
+//    }
+
+    private final String species;
+
+    {
+//        System.out.println("some" + species);
+//        new Animal(""){
+//            @Override
+//            public void move() {
+//
+//            }
+//        };
+    }
 
     public Animal(String species) {
         toString();
