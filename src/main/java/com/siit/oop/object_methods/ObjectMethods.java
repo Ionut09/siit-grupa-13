@@ -7,5 +7,7 @@ public class ObjectMethods {
         System.out.println(aClass.toString());
         System.out.println(aClass.getSimpleName());
         System.out.println(aClass.getName());
+
+//        uidniusnd
     }
 }
