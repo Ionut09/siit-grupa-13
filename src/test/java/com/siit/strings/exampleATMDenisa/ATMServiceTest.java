@@ -21,6 +21,11 @@ public class ATMServiceTest {
 
     private ATMService sut;
 
+    @Before //se executa inainte de fiecare metoda @Test
+    public void setup() {
+        sut = new ATMService(bankDataBase);
+    }
+
     @Test //pt fiecare metoda @Test se creaza o instanta noua de ATMServiceTest
     public void given_card_when_interogate_balance_then_balance_is_returned() {
         //given
@@ -48,8 +53,5 @@ public class ATMServiceTest {
         boolean isGreaterThanArgument = dec.compareTo(new BigDecimal(2)) > 0;
     }
 
-    @Before
-    public void setup() {
-        sut = new ATMService(bankDataBase);
-    }
+
 }
