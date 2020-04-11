@@ -1,0 +1,6 @@
+ExceptionInInitializerError Thrown by the JVM when a static initializer throws
+an exception and doesn’t handle it
+StackOverflowError Thrown by the JVM when a method calls itself too many times
+(this is called infi nite recursion because the method typically calls itself without end)
+NoClassDefFoundError Thrown by the JVM when a class that the code uses is available
+at compile time but not runtime

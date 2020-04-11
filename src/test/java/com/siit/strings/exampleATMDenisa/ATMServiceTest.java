@@ -35,6 +35,7 @@ public class ATMServiceTest {
 
         //nu se pot combina Matchers(any, anyString, anyINt) cu valori reale
         //in cazul unor parametri multipli, ori matchers ori valori concrete
+
 //        given(bankDataBase.getBankAccountByCardNumber(anyString())).willReturn(account);
         given(bankDataBase.getBankAccountByCardNumber(card.getNumber())).willReturn(account);
         given(account.getBalance()).willReturn(balance);

@@ -9,7 +9,19 @@ import java.util.Vector;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
-public class StringManipulation {
+public abstract class StringManipulation {
+
+    public abstract void abstractMethod();
+
+    public static void main(String... args) {
+        String str = "abc";
+        System.out.println(str + "d");
+        System.out.println(str);
+
+        str = str + "d"; //abcd
+        int integer = 4;
+        integer++;
+    }
 
     void checkAnagrams(String s1, String s2) {
         char[] s = s1.toCharArray();

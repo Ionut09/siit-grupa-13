@@ -62,7 +62,8 @@ public class StringManipulationTest {
 
     @Before
     public void setup() {
-        sut = new StringManipulation();
+
+        //sut = new StringManipulation();
     }
 
 

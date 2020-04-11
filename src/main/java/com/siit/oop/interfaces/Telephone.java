@@ -27,7 +27,7 @@ public interface Telephone {
 
     public default void powerOn() { //by default e public
         System.out.println("power on ");
-        doSomething();
+        doSomethingPrivate();
     }
 
     public static void doSomething() {//by default e public
@@ -37,4 +37,8 @@ public interface Telephone {
     void ring();
 
     void sendMessage(String message, String number);
+
+    private void doSomethingPrivate() {
+        System.out.println("bla");
+    } //JCP
 }

@@ -1,0 +1,4 @@
+FileNotFoundException
+IOException Thrown programmatically when there’s a problem reading or writing a fi le
+SQLException
+Exception

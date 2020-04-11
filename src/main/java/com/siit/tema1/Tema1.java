@@ -2,13 +2,65 @@ package com.siit.tema1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Vector;
 
 import static java.lang.Integer.MAX_VALUE;
 import static java.lang.Integer.parseInt;
 
-public class Tema1 {
-    List<String> stringList = new ArrayList<>();
+class AnotherClass {
+
+    protected List method() {
+        return List.of("");
+    }
+
+    public static void main(String... args) {
+        Tema1.getInstance();
+        Tema1.getInstance();
+        Tema1.getInstance();
+        Tema1.getInstance();
+        Tema1.getInstance();
+//        Tema1 ob1 = new Tema1();
+//        Tema1 ob2 = new Tema1();
+//        Tema1 ob3 = new Tema1();
+//        Tema1 ob23 = new Tema1();
+//        Tema1 o4 = new Tema1();
+
+        AnotherClass ac = Tema1.getInstance();
+        List returnedObject = ac.method(); //orice tip covariant, subtip
+
+        System.out.println(returnedObject instanceof Vector);
+        System.out.println(returnedObject.getClass().getSimpleName());
+    }
+}
+
+public class Tema1 extends AnotherClass {
+
+
+    //    @Override
+    public Vector method() {
+        super.method();
+        System.out.println("dabdkjs");
+        return new Vector();
+    }
+
+    private static Tema1 instance = new Tema1();
+
+    public static Tema1 getInstance() {
+        char[] arr = new char[9];
+        return instance;
+    }
+
+    private Tema1() {
+        method();
+//        method(122222);
+        //heavy resources to obtain
+    }
+
+
+    List<String> stringList = new LinkedList<>();
+//    LinkedList is a List
 
     public static void main(String... args) {
         int[][] m = {
@@ -29,6 +81,8 @@ public class Tema1 {
     }
 
     public static void checkSquareMatrix(int[][] m) {
+
+        ArrayList<Object> objects = new ArrayList<>();
         var matrixLength = m.length;
         if (matrixLength == 0) {
             System.out.println("The matrix is not square");
