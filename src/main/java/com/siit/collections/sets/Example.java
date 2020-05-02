@@ -3,6 +3,7 @@ package com.siit.collections.sets;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
+import java.util.NavigableSet;
 import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
@@ -94,7 +95,7 @@ public class Example {
         System.out.println(sortedCitizens.first()); //Alex
         System.out.println(sortedCitizens.last()); //John
 
-        TreeSet<Person> sortedCitizens1 = (TreeSet<Person>) sortedCitizens;
+        NavigableSet<Person> sortedCitizens1 = (TreeSet<Person>) sortedCitizens;
 
         Person person = sortedCitizens1.ceiling(alex);//>= --> Alex
         System.out.println("person = " + person);

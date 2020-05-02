@@ -12,11 +12,12 @@ import lombok.ToString;
 @ToString
 public abstract class Person implements Comparable<Person> {
 
-    private String name;
+    private final String name;
+
+    @EqualsAndHashCode.Include //equals o sa compare doar CNP-ul
+    private final String cnp;
 
     @EqualsAndHashCode.Include
-    private String cnp;
-
     private int age;
 
     //This was before lombok
@@ -26,7 +27,7 @@ public abstract class Person implements Comparable<Person> {
 //
 //        Person person = (Person) comparedPerson;
 //
-//        return this.getCnp().equals(person.getCnp());
+//        return this.getCnp().equals(person.getCnp()) && this.getage==person.age;
 //    }
 //
 //    @Override
@@ -37,6 +38,11 @@ public abstract class Person implements Comparable<Person> {
     //person.compareTo(anotherPerson)
     @Override
     public int compareTo(Person o) {
-        return this.getName().compareTo(o.getName());
+
+        int compare = this.getName().compareTo(o.getName());
+        if (compare == 0) {
+
+        }
+        return compare;
     }
 }

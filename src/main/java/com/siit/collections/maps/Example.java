@@ -1,23 +1,24 @@
 package com.siit.collections.maps;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.util.TreeMap;
 
 public class Example {
+    static Map<String, String> phoneBook = new TreeMap<>();
 
     public static void main(String... args) {
-        Map<String, String> phoneBook = new HashMap<>();
+//        HashMap<String, String> phoneBook1 = new TreeMap<>();
 
         phoneBook.put("John Travolta", "00219092019");
-        phoneBook.put("Arnold Swartzeneger", "0322128821");
+        phoneBook.put("Arnold Schwartzeneger", "0322128821");
         phoneBook.put("Robert", "0912182812");
 
 
         if (phoneBook.containsKey("Stevie Wonder")) {
             phoneBook.replace("Stevie Wonder", "0821981298192");
-//            phoneBook.replace("Stevie Wonder", "0821981298192", "0162162812");
+            phoneBook.replace("Stevie Wonder", "0821981298192", "0162162812");
         } else {
             phoneBook.put("Stevie Wonder", "0821981298192");
         }
@@ -43,7 +44,9 @@ public class Example {
         entries.forEach(entry -> System.out.println(entry.getKey() + entry.getValue()));
 
 
+    }
 
-
+    public Map<String, String> getPhoneBook(){
+        return phoneBook;
     }
 }

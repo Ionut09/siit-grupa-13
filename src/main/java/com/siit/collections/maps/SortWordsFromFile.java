@@ -27,7 +27,7 @@ public class SortWordsFromFile {
                                              .filter(word -> !word.trim().isEmpty())
                                              .peek(word -> System.out.println("word = " + word))
                                              .collect(Collectors.toList());
-        //LinkedHashaMap
+        //LinkedHashMap
         Map<String, Integer> map = new HashMap<>();
 
         for (String word : allWordsFromFile) {

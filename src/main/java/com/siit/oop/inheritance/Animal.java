@@ -1,5 +1,7 @@
 package com.siit.oop.inheritance;
 
+import lombok.Getter;
+
 public abstract class Animal {
 
     static {
@@ -10,6 +12,7 @@ public abstract class Animal {
 //        this.species = s;
 //    }
 
+    @Getter
     private final String species;
 
     {

@@ -16,7 +16,7 @@ public class Example {
         languages.add(1, "Javascript");
         languages.add("Perl");
         languages.add("Scala");
-        //cand e aici ietartorul-->hasNext=true , next = Python, remove -->Python
+        //cand e aici iteratorul-->hasNext=true , next = Python, remove -->Python
         languages.add("Python");
         //e aici iteratorul dupa apelul lui next
 
