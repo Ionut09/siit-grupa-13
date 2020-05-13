@@ -1,14 +1,15 @@
 package com.siit.oop.builder;
 
+import com.siit.annotations.OurAnnotation;
+
 import java.util.Scanner;
 
 import lombok.Builder;
 import lombok.Getter;
-import lombok.Setter;
 
-@Builder
 @Getter
-@Setter
+@Builder
+@OurAnnotation
 public class Employee {
 
     private int age;
