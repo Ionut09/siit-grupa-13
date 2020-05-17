@@ -13,8 +13,12 @@ dependencies {
     compile group: 'org.projectlombok', name: 'lombok', version: '1.18.12'
     annotationProcessor("org.projectlombok:lombok:1.18.12")
 
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.11.0'
+
     compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.8'
     compile group: 'org.springframework.boot', name: 'spring-boot', version: '2.2.7.RELEASE'
+
+
     testCompile group: 'junit', name: 'junit', version: '4.12'
     testCompile group: 'org.mockito', name: 'mockito-all', version: '1.9.5'
     testCompile group: 'org.assertj', name: 'assertj-core', version: '3.15.0'

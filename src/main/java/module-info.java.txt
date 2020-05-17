@@ -1,0 +1,5 @@
+module siit.grupa {
+    requires lombok;
+    opens com.siit.io;
+}
+
