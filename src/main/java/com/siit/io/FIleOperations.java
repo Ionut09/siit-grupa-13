@@ -26,10 +26,10 @@ public class FIleOperations {
         System.out.println(file.getName()); //files
         System.out.println(Arrays.toString(file.listFiles())); //files
 
-        new File("un_foder_creat_din_java/alt_folder").mkdirs();
+        new File("un_folder_creat_din_java/alt_folder").mkdirs();
 
         //Path vs Paths
-        Path path = Paths.get("un_foder_creat_din_java", "alt_folder", "text_file.txt");
+        Path path = Paths.get("un_folder_creat_din_java", "alt_folder", "text_file.txt");
         System.out.println(path.toString());
         path.toFile().createNewFile();
         Files.delete(path);
@@ -38,7 +38,7 @@ public class FIleOperations {
 //                Paths.get("un_foder_creat_din_java/alt_folder/example_maps.txt"),
 //                REPLACE_EXISTING);
 
-        Files.lines(Paths.get("un_foder_creat_din_java/alt_folder/example_maps.txt"))
+        Files.lines(Paths.get("un_folder_creat_din_java/alt_folder/example_maps.txt"))
              .peek(System.out::println)
              .map(String::toUpperCase)
              .collect(Collectors.toList());
