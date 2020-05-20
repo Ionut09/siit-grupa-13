@@ -53,8 +53,5 @@ public class FIleOperations {
              .map(Path::toAbsolutePath)
              .forEach(System.out::println);
     }
-    /*
 
-    un_foder_creat_din_java/alt_folder/../../ <=> ./
-     */
 }
