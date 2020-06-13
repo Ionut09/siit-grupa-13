@@ -1,12 +1,14 @@
 drop database hr;
 create schema hr;
 use hr;
+
 create table if not exists department
 (
-    id   int(2) auto_increment
-        primary key,
-    name varchar(14) not null,
-    city varchar(13) null
+    id   int(2) auto_increment primary key,
+    name varchar(50) not null,
+    city varchar(50) null,
+    sasa char(109)
+
 );
 
 create table if not exists employee

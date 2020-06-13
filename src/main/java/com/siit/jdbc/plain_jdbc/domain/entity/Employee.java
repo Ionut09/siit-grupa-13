@@ -1,4 +1,4 @@
-package com.siit.jdbc;
+package com.siit.jdbc.plain_jdbc.domain.entity;
 
 import java.time.LocalDate;
 
@@ -27,5 +27,6 @@ public class Employee {
 
     private Integer comm;
 
-//    private Department department;
+    @ToString.Exclude
+    private Department department; //null sau nu
 }
