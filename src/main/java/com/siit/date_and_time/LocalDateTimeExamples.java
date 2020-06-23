@@ -1,5 +1,6 @@
 package com.siit.date_and_time;
 
+import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
@@ -46,7 +47,10 @@ public class LocalDateTimeExamples {
 
         ZonedDateTime robertBirthTimeInParis = ZonedDateTime.parse("19-02-1979T07:00 Europe/London", DateTimeFormatter.ofPattern("dd-MM-yyyy'T'HH:mm z"));
 
-        System.out.println("robertBirthTimeInParis = " + LocalDateTime.ofInstant(robertBirthTimeInParis.toInstant(), ZoneId.of("Australia/Lindeman")));
+        System.out.println("robertBirthTimeInParis = " + LocalDateTime.ofInstant(robertBirthTimeInParis.toInstant(), ZoneId.of("Europe/Paris")));
+
+        Duration between = Duration.between(today, robertBirthTimeInParis);
+        System.out.println("between = " + between);
     }
 
 }

@@ -61,6 +61,5 @@ public class LocalDateExamples {
 
         long robertAgeInDays = ChronoUnit.DAYS.between(robertBirthdate, today);
         System.out.println("robertAgeInDays = " + robertAgeInDays);
-
     }
 }
