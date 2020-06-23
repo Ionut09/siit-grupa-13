@@ -46,6 +46,7 @@ public class Application implements CommandLineRunner {
         */
 
         EmployeeService service = applicationContext.getBean(EmployeeService.class);
+
         service.findAll()
                .forEach(employee -> System.out.println("employee = " + employee +
                        "\n\t department = " + employee.getDepartment()));

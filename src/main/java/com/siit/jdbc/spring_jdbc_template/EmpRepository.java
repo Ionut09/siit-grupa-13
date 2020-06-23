@@ -3,7 +3,6 @@ package com.siit.jdbc.spring_jdbc_template;
 import com.siit.jdbc.exception.MyUncheckedException;
 import com.siit.jdbc.plain_jdbc.domain.entity.Employee;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
@@ -11,16 +10,12 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 
 @Component
 @AllArgsConstructor
-@NoArgsConstructor
 public class EmpRepository  {
 
-    @Autowired
-    private JdbcTemplate jdbcTemplate;
-
+    private final JdbcTemplate jdbcTemplate;
     
     public void save(Employee employee) {
         int updatedRows = jdbcTemplate.update("INSERT INTO employee( name, job, hiredate, salary, id) VALUES (?, ?, ?,?,?)",

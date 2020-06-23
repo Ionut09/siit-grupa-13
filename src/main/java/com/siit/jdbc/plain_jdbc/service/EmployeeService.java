@@ -4,15 +4,22 @@ import com.siit.jdbc.plain_jdbc.domain.entity.Employee;
 import com.siit.jdbc.plain_jdbc.repository.EmployeeRepository;
 import com.siit.jdbc.plain_jdbc.repository.EmployeeRepositoryImpl;
 
+import org.springframework.stereotype.Service;
+
 import java.time.LocalDate;
 import java.util.List;
 
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Service
 public class EmployeeService {
 
-    private final EmployeeRepository employeeRepository;
+    private EmployeeRepository employeeRepository;
 
     //logica de milioane de $$
     public void create(Employee employee) {
@@ -28,7 +35,8 @@ public class EmployeeService {
     }
 
     public static void main(String... args) {
-        EmployeeService employeeService = new EmployeeService(new EmployeeRepositoryImpl());
+        EmployeeService employeeService = new EmployeeService();
+        employeeService.setEmployeeRepository(new EmployeeRepositoryImpl());
 
         Employee john_doe = Employee.builder()
                                     .id(10)
@@ -45,7 +53,6 @@ public class EmployeeService {
                                "\n\t department = " + employee.getDepartment()));
 
         employeeService.delete(35);
-
 
 
     }
